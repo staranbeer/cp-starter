@@ -1,0 +1,51 @@
+.line {
+  width: 100%;
+  border: none;
+  border-top: thin dashed lightgrey;
+}
+.line[data-clone-status='cloning'] {
+  border-top: thin solid lightgrey;
+  animation: expand 1s linear infinite;
+}
+.line[data-clone-status='done'] {
+  border-top: 1px solid car(--cp-surface-success);
+}
+.line[data-clone-status='failed'] {
+  border-top: 1px solid var(--cp-surface-critical);
+}
+
+.ripple {
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+  border: thin solid gray;
+}
+.ripple[data-clone-status='cloning'] {
+  animation: ripple 3s linear infinite;
+}
+.ripple[data-clone-status='done'] {
+  border: 1px solid var(--cp-surface-success);
+}
+.ripple[data-clone-status='failed'] {
+  border: 1px solid var(--cp-surface-critical);
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

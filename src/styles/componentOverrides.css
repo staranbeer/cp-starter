@@ -1,0 +1,105 @@
+/* 
+These are global styling polyfills for cubedev elements, remove these once issue in 
+the component library are resolved
+
+*/
+
+/* ComboBox */
+
+div[data-qa='ComboBox'] {
+  background-color: var(--cp-surface) !important;
+  border: 1px solid var(--cp-border) !important;
+}
+
+button[data-qa='ComboTriggerTrigger'] svg {
+  color: var(--cp-text) !important;
+}
+
+/* MODAL */
+
+div[data-qa^='Underlay'] {
+  z-index: 999999 !important;
+  background-color: var(--cp-surface-primary-light) !important;
+  opacity: 0.5 !important;
+}
+
+div[data-qa^='Tray'] {
+  z-index: 1000000 !important;
+}
+
+[data-theme='dark'] div[data-qa^='Underlay'] {
+  opacity: 0.5 !important;
+  background-color: var(--cp-surface) !important;
+}
+
+section[data-qa^='Dialog'] {
+  box-shadow: 0px 1.33333px 4px 0.25px var(--cp-shadow) !important;
+  border: 1px solid var(--cp-border) !important;
+}
+
+/* dialog-header */
+
+header[data-qa='Header'] h1[data-qa='Title'] {
+  color: var(--cp-text) !important;
+}
+
+div[data-qa^='Modal'] {
+  z-index: 1000000 !important;
+}
+
+button[data-is-disabled] {
+  cursor: not-allowed !important;
+}
+
+/* MENU */
+
+li[data-qa^='MenuItem'] {
+  background-color: var(--cp-surface) !important;
+}
+
+li[data-qa^='MenuItem'] button {
+  background-color: var(--cp-surface) !important;
+  color: var(--cp-text) !important;
+}
+li[data-qa^='MenuItem'] button.danger {
+  background-color: var(--cp-surface) !important;
+  color: var(--cp-text-critical) !important;
+}
+
+li[data-qa^='MenuItem'] button:hover {
+  background-color: var(--cp-surface-hovered) !important;
+}
+
+li[data-qa^='MenuItem'] button[data-is-hovered^=''] {
+  outline: none !important;
+  border-width: 0px !important;
+}
+
+#menu li button[data-is-selected=''] {
+  background-color: var(--cp-surface-hovered) !important;
+}
+
+#menu li button[data-is-focused=''] {
+  box-shadow: none;
+}
+
+/* TOAST */
+
+div[data-qa^='FloatingNotification'] {
+  background-color: var(--cp-surface) !important;
+}
+
+div[data-qa^='FloatingNotification'] p[data-qa^='Paragraph'] {
+  color: var(--cp-text) !important;
+}
+
+div[data-qa^='FloatingNotification']
+  p[data-qa^='Paragraph']
+  button[data-qa^='NotificationCloseButton']
+  svg {
+  color: var(--cp-icon) !important;
+}
+
+button[data-qa^='ComboBoxTrigger'] {
+  color: var(--cp-text-icon) !important;
+}
